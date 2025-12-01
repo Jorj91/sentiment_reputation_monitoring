@@ -1,14 +1,6 @@
-fasttext
-transformers
-datasets
-huggingface-hub
 fastapi
 uvicorn
-pandas
-scikit-learn
-evidently
-prometheus-client
+transformers
+torch
+pydantic
 pytest
-python-dotenv
-tqdm
-requests

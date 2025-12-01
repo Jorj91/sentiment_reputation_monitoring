@@ -1,8 +1,4 @@
 __pycache__/
+.venv/
 *.pyc
-.env
-artifacts/
-.vscode/
-.ipynb_checkpoints/
-data/raw/*
-!data/raw/.gitkeep
+local_model/
