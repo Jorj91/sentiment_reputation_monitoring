@@ -14,3 +14,6 @@ def home():
 @app.post("/predict")
 def predict(input_data: TextInput):
     return predict_sentiment(input_data.text)
+
+# source .venv/bin/activate
+# uvicorn src.app:app --reload --host 0.0.0.0 --port 8000
