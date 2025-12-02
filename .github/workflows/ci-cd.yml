@@ -24,5 +24,8 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Make src available as module
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+
       - name: Run tests
-        run: pytest
+        run: pytest -v
