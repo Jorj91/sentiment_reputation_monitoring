@@ -38,7 +38,7 @@ jobs:
 
       # 6 Upload local_model as artifact
       - name: Upload local_model as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: local_model
           path: local_model/
