@@ -1,3 +1,4 @@
+# ensure model inference works
 from src.sentiment import predict_sentiment
 
 def test_sentiment_output():

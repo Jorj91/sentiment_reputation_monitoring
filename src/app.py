@@ -1,3 +1,5 @@
+# FastAPI application for serving the model
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from .sentiment import predict_sentiment

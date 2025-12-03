@@ -1,4 +1,4 @@
-
+# script to create model for CI
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 MODEL_ID = "cardiffnlp/twitter-roberta-base-sentiment-latest"
