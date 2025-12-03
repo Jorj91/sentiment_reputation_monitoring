@@ -33,16 +33,7 @@ jobs:
 
       # 5 Create tiny model for CI
       - name: Create tiny model for CI
-        run: |
-          mkdir -p local_model
-          python - << 'EOF'
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-model_id = "hf-internal-testing/tiny-random-distilbert"
-tok = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForSequenceClassification.from_pretrained(model_id)
-tok.save_pretrained("local_model")
-model.save_pretrained("local_model")
-EOF
+        run: python scripts/create_tiny_model.py
 
       # 6 Run tests
       - name: Run tests
