@@ -2,8 +2,10 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 MODEL_ID = "cardiffnlp/twitter-roberta-base-sentiment-latest"
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
-model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID)
+
+# Load tokenizer and model without interactive prompts
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, use_fast=True)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID, ignore_mismatched_sizes=True)
 
 # Save it locally
 model.save_pretrained("local_model")
