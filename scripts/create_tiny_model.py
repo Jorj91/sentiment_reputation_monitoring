@@ -1,14 +1,10 @@
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-import os
 
-os.makedirs("local_model", exist_ok=True)
+MODEL_ID = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID)
 
-model_id = "hf-internal-testing/tiny-random-distilbert"
-tok = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForSequenceClassification.from_pretrained(model_id)
-
-tok.save_pretrained("local_model")
+# Save it locally
 model.save_pretrained("local_model")
-
-print("Tiny model created successfully!")
+tokenizer.save_pretrained("local_model")
