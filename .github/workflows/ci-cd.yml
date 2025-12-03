@@ -21,13 +21,13 @@ jobs:
         with:
           python-version: "3.10"
 
-      # 3️ Install dependencies
+      # 3 Install dependencies
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4️ Make src available as module
+      # 4 Make src available as module
       - name: Make src available as module
         run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
@@ -49,3 +49,4 @@ EOF
       # 6 Run tests
       - name: Run tests
         run: pytest -v
+
