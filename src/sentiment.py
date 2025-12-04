@@ -3,7 +3,8 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 import numpy as np
 
-MODEL_PATH = "./local_model"
+#point to the latest fine-tuned model created with train.py
+MODEL_PATH = "src/models/model_v1"
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)

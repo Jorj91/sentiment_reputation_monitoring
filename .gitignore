@@ -2,4 +2,5 @@ __pycache__/
 .venv/
 *.pyc
 local_model/
-
+src/models/model_v1/model.safetensors
+*.safetensors
